@@ -53,3 +53,25 @@ var maxArea = function(height) {
     }
     return max
 };
+
+
+var maxArea = function(height) {
+  let l = 0, r = height.length - 1;
+  let w = height.length - 1;
+  let max = 0
+  while(l <= r){
+      let temp;
+      if(height[l] < height[r]){
+          temp = height[l] * w;
+          max = Math.max(temp, max);
+          l++;
+          w--;
+      } else {
+          temp = height[r] * w;
+          max = Math.max(temp, max);
+          r--;
+          w--;
+      }
+  }
+  return max;
+};
