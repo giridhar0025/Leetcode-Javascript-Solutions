@@ -61,10 +61,17 @@ var removeElement = function(nums, val) {
             i--
         }
     }
+<<<<<<< HEAD
 };
 
 
 // Using Two Pointer Methods
+=======
+ return nums.length
+};
+
+// Two Pointer Approach
+>>>>>>> ef1bd009d43c684ee9525b04195ab2a0aac95e93
 
 var removeElement = function(nums, val) {
     let i = 0;
@@ -79,4 +86,10 @@ var removeElement = function(nums, val) {
       }
     }
     return i
+<<<<<<< HEAD
 }
+=======
+}
+
+
+>>>>>>> ef1bd009d43c684ee9525b04195ab2a0aac95e93
