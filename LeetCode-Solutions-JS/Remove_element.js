@@ -51,6 +51,9 @@
 // It does not matter what you leave beyond the returned k (hence they are underscores).
 
 
+
+// Using Higher Order Functions
+
 var removeElement = function(nums, val) {
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] === val) {
@@ -59,3 +62,21 @@ var removeElement = function(nums, val) {
         }
     }
 };
+
+
+// Using Two Pointer Methods
+
+var removeElement = function(nums, val) {
+    let i = 0;
+    let j = 0
+    while (j < nums.length) {
+      if (nums[j] === val) {
+        j++
+      } else {
+        nums[i] = nums[j]
+        i++
+        j++
+      }
+    }
+    return i
+}

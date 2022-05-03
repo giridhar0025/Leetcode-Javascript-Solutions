@@ -73,4 +73,16 @@ function twoSum(nums, target) {
 
 
 
-console.log(twoSum([2,7,11,15], 10))
+// Hashmap Method Solutions
+
+function twoSum(nums, target) {
+  let maps = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    let difference = target - nums[i]
+    if (maps.has(difference)) {
+    return [maps.get(difference), i]
+  }
+  maps.set(nums[i], i)
+}
+return []
+}
