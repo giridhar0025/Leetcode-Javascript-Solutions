@@ -50,46 +50,32 @@
 // Note that the five elements can be returned in any order.
 // It does not matter what you leave beyond the returned k (hence they are underscores).
 
-
-
 // Using Higher Order Functions
 
-var removeElement = function(nums, val) {
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === val) {
-        nums.splice(i,1)  
-            i--
-        }
-    }
-<<<<<<< HEAD
-};
-
-
-// Using Two Pointer Methods
-=======
- return nums.length
-};
-
-// Two Pointer Approach
->>>>>>> ef1bd009d43c684ee9525b04195ab2a0aac95e93
 
 var removeElement = function(nums, val) {
-    let i = 0;
-    let j = 0
-    while (j < nums.length) {
-      if (nums[j] === val) {
-        j++
-      } else {
-        nums[i] = nums[j]
-        i++
-        j++
-      }
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === val) {
+      nums.splice(i,1)
+      i--
     }
-    return i
-<<<<<<< HEAD
-}
-=======
+  }
+  return nums.length
 }
 
+// Using Two pointer Method
 
->>>>>>> ef1bd009d43c684ee9525b04195ab2a0aac95e93
+var removeElement = function(nums, val) {
+  let i = 0;
+  let j = 0
+  while (j < nums.length) {
+    if (nums[j] === val) {
+      j++
+    } else {
+      nums[i] = nums[j]
+      i++
+      j++
+    }
+  }
+  return i
+}
